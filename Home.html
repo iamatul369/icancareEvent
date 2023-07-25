@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Website</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="https://secure.payu.in/js/sdk/payu-sdk-v1.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <!-- Transparent Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <img src="images/Logo.png" alt="Company Logo" class="logo">
+      <ul class="nav-links">
+        <!-- <li>Hello</li> -->
+        <li><a href="#section1">Home</a></li>
+        <li><a href="#section2">About</a></li>
+        <li><a href="#section3">Speakers</a></li>
+        <li><a href="#section4">Schedule</a></li>
+        <li><a href="#section5">Register</a></li>
+        <li><a href="#section6">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="image-container" id="section1">
+    <img src="images/pexels-zhang-kaiyv-1083515.jpg" alt="Image" class="fit-image">
+    <div class="content">
+      <p>I CAN WIN FOUNDATION & BAJAJ ELECTRICALS FOUNDATION</p>
+      <P>SUPPORTED BY</P>
+      <p style="margin-top: 3%;"><b>ICANCARE ACADEMY & GUJARAT UNIVERSITY</b></p>
+      <div id="event-title">
+        <h1 style="margin-top: 3%">1<sup>st</sup> Masters Training in</h1>
+        <h1>Tobacco Cessation</h1>
+      </div>
+      <p style="margin-top: 3%;">"CAPACITY BUILDING - FACULTY TRAINING PROGRAM"</p>
+    </div>
+  </div>
+  <!-- Event Timer -->
+  <div class="event-timer">
+    <div class="countdown">
+      <span class="days time-block " id="days"></span>
+      <span class="separator">|</span>
+      <span class="hours time-block " id="hours"></span>
+      <span class="separator">|</span>
+      <span class="minutes time-block " id="minutes"></span>
+      <span class="separator">|</span>
+      <span class="seconds time-block " id="seconds"></span>
+    </div>
+  </div>
+
+  <div class="event-details" id="section2" style="margin-top: 10%;">
+    <h3 id="details-title" style="color: rgb(221, 70, 5);">
+      13<sup>th</sup>, 14<sup>th</sup>, 15<sup>th</sup> AUGUST 2023
+    </h3>
+    <h1>A 3 DAYS Residential PROGRAM 6:00 AM - 9:30 PM.</h1>
+    <p style="margin-top: 3%;font-size: 120%;">
+      We provide a varity of services for you. all of our
+    </p>
+    <p style="margin-top: 1%;font-size: 120%;">
+      services coe with a 100% satisfaction
+    </p>
+  </div>
+
+  <div class="event-speaker" id="section3" style="margin-top: 10%;">
+    <h1>EVENT SPEAKERS</h1>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-front">
+          <img id="imgSpeaker" src="images/Speaker.png" alt="Image 1">
+          <div class="card-content">
+            <h2>Dr. Pawan Gupta M.Ch.</h2>
+          </div>
+        </div>
+        <div class="card-back">
+          <h2>Dr. Pawan Gupta M.Ch.</h2>
+          <p>Founder ICanCaRe</p>
+          <p>9811290152</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-front">
+          <img id="imgSpeaker" src="images/Speaker.png" alt="Image 1">
+          <div class="card-content">
+            <h2>Dr. Reena R Kumar</h2>
+          </div>
+        </div>
+        <div class="card-back">
+          <h2>Dr. Reena R Kumar</h2>
+          <p>Academic Director ICanCaRe</p>
+          <p>9811091415</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-front">
+          <img id="imgSpeaker" src="images/Speaker.png" alt="Image 1">
+          <div class="card-content">
+            <h2>Dr. Rakesh Rawal</h2>
+          </div>
+        </div>
+        <div class="card-back">
+          <h2>Dr. Rakesh Rawal</h2>
+          <p>Co-Ordinator - Gujarat University</p>
+          <p>99252-44855</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-front">
+          <img id="imgSpeaker" src="images/Speaker.png" alt="Image 1">
+          <div class="card-content">
+            <h2>Mr. Rishabh Agrawal</h2>
+          </div>
+        </div>
+        <div class="card-back">
+          <h2>Mr. Rishabh Agrawal</h2>
+          <p>CTO - ICanCaRe</p>
+          <p>9971011169</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="program-schedule" id="section4" style="margin-top: 10%;">
+    <h1>PROGRAM SCHEDULE</h1>
+    <div class="schedule-container">
+      <div class="day-menu">
+        <ul>
+          <li class="selectedDay" id="d1" onclick="showSchedule('day1')">Day 1</li>
+          <li class="selectedDay" id="d2" onclick="showSchedule('day2')">Day 2</li>
+          <li class="selectedDay" id="d3" onclick="showSchedule('day3')">Day 3</li>
+          <!-- Add more days as needed -->
+        </ul>
+      </div>
+      <div class="schedule-content">
+        <div class="header">SCHEDULE DETAILS</div>
+        <div class="scroll-content">
+          <div id="day1" class="day-schedule">
+            <ul>
+              <li>6:00 - 7:30 AM - Destress/Rejuvenate</li>
+              <li>8:00 - 9:00 AM - Breakfast</li>
+              <li>9:00 - 9:30 AM - Introduction</li>
+              <li>9:30 - 11:00 AM - Session 1</li>
+              <li>11:00 - 11:30 AM - Relax & Tea</li>
+              <li>11:30 - 1:15 PM - Session 2</li>
+              <li>1:15 - 2:00 PM - Guest Lecture</li>
+              <li>2:00 - 3:00 PM - Lunch</li>
+              <li>3:00 - 4:30 PM - Session 3</li>
+              <li>4:30 - 4:45 PM - Quiz</li>
+              <li>4:45 - 5:00 PM - De Stress</li>
+              <li>5:00 - 5:15 PM - Tea</li>
+              <li>5:15 - 6:30 PM - Role play, Movie, Skit Panel Discussion</li>
+              <li>6:30 - 8:00 PM - Free Time</li>
+              <li>8:00 - 9:00 PM - Dinner Symposium - Project discussion Special Guest</li>
+              <li>9:00 - 10:30 PM - Entertainment & Dinner</li>
+            </ul>
+          </div>
+          <div id="day2" class="day-schedule">
+            <ul>
+              <ul>
+                <li>6:00 - 7:30 AM - Destress/Rejuvenate</li>
+                <li>8:00 - 9:00 AM - Breakfast</li>
+                <li>9:00 - 9:30 AM - Warming up</li>
+                <li>9:30 - 11:00 AM - Session 4</li>
+                <li>11:00 - 11:30 AM - Relax & Tea</li>
+                <li>11:30 - 1:15 PM - Session 5</li>
+                <li>1:15 - 2:00 PM - Guest Lecture</li>
+                <li>2:00 - 3:00 PM - Lunch</li>
+                <li>3:00 - 4:30 PM - Session 6</li>
+                <li>4:30 - 4:45 PM - Quiz</li>
+                <li>4:45 - 5:00 PM - De Stress</li>
+                <li>5:00 - 5:15 PM - Tea</li>
+                <li>5:15 - 6:30 PM - Role play, Movie, Skit Panel Discussion</li>
+                <li>6:30 - 8:00 PM - Free Time</li>
+                <li>8:00 - 9:00 PM - Dinner Symposium - Project discussion Special Guest</li>
+                <li>9:00 - 10:30 PM - Entertainment & Dinner</li>
+              </ul>
+            </ul>
+          </div>
+          <div id="day3" class="day-schedule">
+            <ul>
+              <ul>
+                <li>6:00 - 7:30 AM - Destress/Rejuvenate</li>
+                <li>8:00 - 9:00 AM - Breakfast</li>
+                <li>9:00 - 9:30 AM - Warming up</li>
+                <li>9:30 - 11:00 AM - Session 7</li>
+                <li>11:00 - 11:30 AM - Relax & Tea</li>
+                <li>11:30 - 1:15 PM - Session 8</li>
+                <li>1:15 - 2:00 PM - Guest Lecture</li>
+                <li>2:00 - 3:00 PM - Lunch</li>
+                <li>3:00 - 4:30 PM - Assessment</li>
+                <li>4:30 - 4:45 PM - Assessment</li>
+                <li>4:45 - 5:00 PM - De Stress</li>
+                <li>5:00 - 5:15 PM - Tea</li>
+                <li>5:15 - 6:30 PM - Felicitation/Prizes</li>
+                <li>6:30 - 8:00 PM - Disperse</li>
+                <li>8:00 - 9:00 PM - Disperse</li>
+                <li>9:00 - 10:30 PM - Disperse</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="register-now" id="section5" style="margin-top: 7%;">
+    <h2>The program by I CAN WIN FOUNDATION is supported by limited grant by</h2>
+    <h1> Bajaj Electricals Foundation.</h1>
+
+    <!-- <label for="amount">Amount:</label> -->
+    <!-- <div class="price-element">
+      <label>Scholar :- </label>
+      <select id="scholar">
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+      </select>
+    </div>
+    <div class="price-element">
+      <label>Room Preference :- </label>
+      <select id="room">
+        <option value="twin">Twin</option>
+        <option value="single">Single</option>
+      </select>
+    </div>
+    <div class="price-element">
+      <label>No of Days :- </label>
+      <label>
+        <input checked type="radio" name="day" value="1" /> One
+      </label>
+      <label>
+        <input type="radio" name="day" value="2" /> Two
+      </label>
+      <label>
+        <input type="radio" name="day" value="3" /> Three
+      </label>
+    </div> -->
+
+    <div class="cardNew">
+      <form>
+        <label for="dropdown1">Scholar <i class="fa fa-info-circle" style=" overflow: auto ;" title="Do you like my fa-cog icon?"></i></label>
+        <select id="scholar">
+          <option value="Y">Yes</option>
+          <option value="N">No</option>
+        </select>
+  
+        <label for="dropdown2">Room Preference</label>
+        <select id="room">
+          <option value="twin">Twin</option>
+          <option value="single">Single</option>
+        </select>
+  
+        <fieldset>
+          <legend>No of Days</legend>
+          <label><input checked type="radio" name="day" value="1">One</label>
+          <label><input type="radio" name="day" value="2">Two</label>
+          <label><input type="radio" name="day" value="3">Three</label>
+        </fieldset>
+        <h2 id="amount" style="color: red;">4400</h2>
+        <button class="button" id="payNowBtn">Pay Now</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="contact" id="section6" style="margin-top: 7%;">
+     <h2>CONTACT</h2>
+    <div class="card-container1">
+      <div class="card1">
+        <div class="card-front1">
+          <img id="imgSpeaker1" src="images/Speaker.png" alt="Image 1">
+          <div class="card-content1">
+            <h2>Mrs. Shruti Agrawal</h2>
+            <p>CSO - ICanCaRe</p>
+            <p>6309437912, shruti@icancare.in</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="partner" style="margin-top: 5%;">
+    <section class="associated-partners">
+      <h2>ASSOCIATED PARTNERS</h2>
+      <div class="logos">
+        <img src="images/partner.png" alt="Partner 1">
+        <!-- <img src="images/pexels-zhang-kaiyv-1083515.jpg" alt="Partner 2"> -->
+        <!-- <img src="images/pexels-zhang-kaiyv-1083515.jpg" alt="Partner 3"> -->
+        <!-- Add more partner logos as needed -->
+      </div>
+    </section>
+  </div>
+
+  <script src="home.js"></script>
+  <script>
+    document.getElementById("payNowBtn").addEventListener("click", initiatePayment);
+
+    function initiatePayment() {
+      const amount = document.getElementById("amount").value;
+      const orderId = Math.floor(Math.random() * 100000).toString(); // Generate a random order ID
+      const paymentParams = { amount, orderId };
+
+      // Call your Node.js server to create a payment order
+      fetch("http://localhost:3000/createPayment", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(paymentParams),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // On successful response from server, redirect to PayU's payment page
+          const payuForm = document.createElement("form");
+          payuForm.setAttribute("method", "post");
+          payuForm.setAttribute("action", "https://sandboxsecure.payu.in/_payment"); // Use the live URL for production
+
+          Object.entries(data).forEach(([key, value]) => {
+            const input = document.createElement("input");
+            input.setAttribute("type", "hidden");
+            input.setAttribute("name", key);
+            input.setAttribute("value", value);
+            payuForm.appendChild(input);
+          });
+
+          document.body.appendChild(payuForm);
+          payuForm.submit();
+        })
+        .catch((error) => {
+          console.error("Error initiating payment:", error);
+          alert("Failed to initiate payment. Please try again later.");
+        });
+    }
+  </script>
+</body>
+
+</html>
